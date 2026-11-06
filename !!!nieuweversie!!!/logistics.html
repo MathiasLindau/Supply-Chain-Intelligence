@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supply Chain Intelligence</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="startpagina.html" aria-label="Supply Chain Intelligence – Homepage">
+      <img class="brand-logo" src="images/logo.png" alt="Supply Chain Intelligence"> 
+    </a> 
+    
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="logistics.html" class="nav-link">Logistics</a>
+        <a href="contract.html" class="nav-link">Contracts</a>
+        <a href="energy.html" class="nav-link">Energy</a>
+        <a href="inventory.html" class="nav-link">Inventory</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<main>
+
+  <!-- 1. HERO: Bild und Einleitung -->
+
+  <section class="hero">
+    <div class="container hero-panel">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">LOGISTICS</p>
+
+          <h1>Are your freight invoices correct?</h1>
+
+          <p class="intro">
+            Freight invoices contain valuable information about transport
+            costs, routes and services. Comparing them with agreed prices
+            can reveal unusual charges that deserve a closer look.
+          </p>
+
+        </div>
+
+        <div class="hero-image hero-image--fill">
+          <img
+            src="Image2/pexels-jan-van-der-wolf-11680885-33537946.jpg"
+            alt="Cargo ships and containers at a commercial port"
+          >
+        </div>
+
+    </div>
+  </section>
+
+
+  <!-- 2. THE PROBLEM: Vier Schritte -->
+
+  <section class="section section-soft">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">THE PROBLEM</p>
+
+        <h2>Why are freight invoices difficult to verify?</h2>
+
+        <p>
+          High invoice volumes, incomplete comparisons and manual
+          checks can make billing discrepancies difficult to identify.
+        </p>
+
+      </div>
+
+      <ol class="tool-grid">
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/soap-so-0xfaLGdmtm4-unsplash.jpg"
+            alt="Freight containers at a shipping terminal"
+            loading="lazy"
+          >
+
+            <h3>Many invoices</h3>
+            <p>
+              Logistics teams receive numerous carrier invoices.
+              Each one may require checking the price, service and
+              applicable surcharges.
+            </p>
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-tima-miroshnichenko-6694921.jpg"
+            alt="Industrial operations and equipment"
+            loading="lazy"
+          >
+
+            <h3>Manual judgement</h3>
+            <p>
+              Employees often rely on experience and plausibility
+              when deciding whether an invoice looks correct.
+              Unusual details can be overlooked.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-mizunokozuki-12899140.jpg"
+            alt="Cargo ships and containers at a port"
+            loading="lazy"
+          >
+
+            <h3>Automated billing</h3>
+            <p>
+              Carrier billing systems process charges automatically.
+              Incorrect rates or surcharges may remain unnoticed unless
+              invoices are checked against the agreed terms.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-kindelmedia-7688191.jpg"
+            alt="Warehouse shelving and inventory"
+            loading="lazy"
+          >
+
+            <h3>Hidden discrepancies</h3>
+            <p>
+              Small differences between agreed and billed prices can
+              accumulate across many shipments if invoices are not
+              checked systematically.
+            </p>
+
+        </li>
+
+    </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- 3. PREPARATION: Daten vorbereiten -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">DATA PREPARATION</p>
+
+        <h2>Prepare the data before building a model.</h2>
+
+        <p>
+          Useful analysis starts with relevant historical records.
+          The information must be organised and checked before
+          a model can learn from it.
+        </p>
+
+      </div>
+
+    <ol class="tool-grid">
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-kevinbidwell-31955577.jpg"
+            alt="Freight transport operations"
+            loading="lazy"
+          >
+
+            <h3>Collect the data</h3>
+            <p>
+              Gather historical invoices from previous months or years,
+              together with available contracts, rate agreements and
+              shipment records.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-yankrukov-7693222.jpg"
+            alt="Industrial operations and equipment"
+            loading="lazy"
+          >
+
+            <h3>Standardise the data</h3>
+            <p>
+              Organise invoice number, provider, service, date, amount,
+              route and other relevant fields into a consistent format.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-toulouse-3195784.jpg"
+            alt="Warehouse inventory"
+            loading="lazy"
+          >
+
+            <h3>Label verified cases</h3>
+            <p>
+              Review historical invoices against the applicable contract,
+              shipment details and service records. Label cases only
+              when there is sufficient evidence that they are correct
+              or incorrect.
+            </p>
+
+        </li>
+
+    </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- 4. TECHNICAL SOLUTION: Modell entwickeln und testen -->
+
+  <section class="section section-soft">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">TECHNICAL SOLUTION</p>
+
+        <h2>Find patterns that help identify unusual invoices.</h2>
+
+        <p>
+          Data science methods can help distinguish ordinary cost
+          patterns from cases that need closer investigation.
+        </p>
+
+      </div>
+
+      <ol class="tool-grid">
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/resource-database-TIUyoNGM0no-unsplash.jpg"
+            alt="Industrial operations and equipment"
+            loading="lazy"
+          >
+
+            <h3>Identify useful predictors</h3>
+            <p>
+              Explore which variables, such as transport mode, route,
+              service type and cost components, help distinguish
+              verified invoices from known errors.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-altman-5125366.jpg"
+            alt="Electricity infrastructure"
+            loading="lazy"
+          >
+
+            <h3>Train and test the model</h3>
+            <p>
+              Use separate training and test data. Evaluate how well
+              the model identifies known cases and repeat the process
+              when the results are not reliable enough.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-cottonbro-6803528.jpg"
+            alt="Warehouse shelving and inventory"
+            loading="lazy"
+          >
+
+            <h3>Validate the results</h3>
+            <p>
+              Test whether the useful patterns remain reliable on
+              previously unseen data. Noisy data and misleading
+              relationships must be considered before using the model.
+            </p>
+
+        </li>
+
+    </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- 5. PRACTICAL IMPLEMENTATION: Neue Rechnungen prüfen -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">PRACTICAL IMPLEMENTATION</p>
+
+        <h2>From new invoices to a focused review.</h2>
+
+        <p>
+          Once validated, the model can support recurring invoice checks
+          and help employees focus on the cases that need attention.
+        </p>
+
+      </div>
+
+      <ol class="tool-grid">
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-gustavo-fring-6720545.jpg"
+            alt="Freight transport operations"
+            loading="lazy"
+          >
+
+            <h3>Feed new data</h3>
+            <p>
+              Provide new daily or weekly invoices in the same
+              standardised format used to develop the model.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-pixabay-210607.jpg"
+            alt="Cargo ships and containers at a port"
+            loading="lazy"
+          >
+
+            <h3>Process the invoices</h3>
+            <p>
+              The model evaluates the available information and compares
+              each invoice with patterns learned from historical data.
+            </p>
+
+        </li>
+
+        <li class="tool-card">
+
+          <img
+            src="Image2/pexels-ron-lach-9222427.jpg"
+            alt="Industrial operations and equipment"
+            loading="lazy"
+          >
+
+            <h3>Review flagged cases</h3>
+            <p>
+              Invoices can be marked as potentially unusual or
+              within the expected range. A flagged invoice needs
+              a second check; it is not automatically an error.
+            </p>
+
+        </li>
+
+    </ol>
+
+    </div>
+
+  </section>
+
+  <!-- The tool-specific interactive demo can be inserted here. -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+           <a class="brand" href="startpagina.html" aria-label="Supply Chain Intelligence – Homepage">
+          <img
+          class="brand-logo"
+          src="images/logo.png"
+          alt="Supply Chain Intelligence">
+          </a>
+        <p>
+          Practical tools for forecasts, freight costs and margins.
+        </p>
+      </div>
+    </div>    
+
+    <div class="footer-bottom">
+      <span>© 2026 Supply Chain Data Science</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
