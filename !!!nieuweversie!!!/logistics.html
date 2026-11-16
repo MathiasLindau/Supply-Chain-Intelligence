@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Supply Chain Intelligence</title>
   <link rel="stylesheet" href="style1.css">
+  <script src="logistics-demo.js" defer></script>
 </head>
 <body>
 
@@ -389,7 +390,121 @@
 
   </section>
 
-  <!-- The tool-specific interactive demo can be inserted here. -->
+  <!-- INTERACTIVE DEMO -->
+
+<section class="demo-launch">
+  <div class="container demo-launch-inner">
+
+    <div>
+      <p class="eyebrow">INTERACTIVE DEMO</p>
+      <h2>Explore sample freight data.</h2>
+      <p>
+        Explore 1,000 simulated European transport orders.
+        Each sample displays 10 randomly selected shipments.
+      </p>
+    </div>
+
+    <button class="demo-button" id="demo-open" type="button">
+      View demo
+    </button>
+
+  </div>
+</section>
+
+
+<!-- DEMO OVERLAY -->
+
+<div class="demo-overlay" id="demo-overlay" hidden>
+
+  <div class="demo-dialog"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="demo-title">
+
+    <div class="demo-header">
+
+      <div>
+        <p class="eyebrow">FREIGHT DATA ANALYSIS</p>
+        <h2 id="demo-title">European transport orders</h2>
+        <p class="demo-description">
+          10 randomly selected records from 1,000 simulated shipments.
+        </p>
+      </div>
+
+      <button class="demo-close" id="demo-close"
+              type="button" aria-label="Close demo">
+        &times;
+      </button>
+
+    </div>
+
+    <div class="demo-loader" id="demo-loader" hidden>
+  <div class="demo-spinner"></div>
+  <p>Analysing freight invoices...</p>
+  <span>Comparing transport costs and service details</span>
+</div>
+
+    <div class="demo-table-wrap">
+
+      <table class="demo-table">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Shipment</th>
+            <th>Loading date</th>
+            <th>Delivery date</th>
+            <th>Location from</th>
+            <th>Location to</th>
+            <th>Distance (km)</th>
+            <th>Service description</th>
+            <th>Costs (€)</th>
+          </tr>
+        </thead>
+
+        <tbody id="shipment-rows">
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <div class="demo-results" id="demo-results" hidden>
+
+  <div>
+    <p class="eyebrow">SIMULATED ANALYSIS</p>
+    <h3>Potential savings</h3>
+    <p>
+      Sum of invoice values flagged for further review.
+    </p>
+  </div>
+
+  <strong id="demo-savings">€ 0.00</strong>
+
+</div>
+
+<div class="demo-footer">
+
+  <p>Illustrative data only. No live system connected.</p>
+
+  <div class="demo-actions">
+
+    <button class="demo-button" id="demo-refresh" type="button">
+      Show another 10
+    </button>
+
+    <button class="demo-button demo-button--primary"
+            id="demo-run" type="button">
+      Run analysis
+    </button>
+
+  </div>
+
+</div>
+
+  </div>
+
+</div>
 
 </main>
 
